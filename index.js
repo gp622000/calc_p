@@ -1,5 +1,6 @@
 var inputValue = document.querySelector(".input-text");
-var firstValue = "";
+var first = "";
+var second = "";
 // var arr = [];
 // inputValue.addEventListener("keydown", (value) => {
 //   arr.push(value.key);
@@ -81,8 +82,32 @@ multiply.addEventListener("click", () => {
   second = "*";
 });
 
+const divide = document.querySelector(".divide");
+divide.addEventListener("click", () => {
+  first = inputValue.value;
+  inputValue.value = "";
+  second = "/";
+});
+
+const percentage = document.querySelector(".percentage");
+percentage.addEventListener("click", () => {
+  first = inputValue.value / 100;
+  inputValue.value = "";
+  second = "*";
+});
+
+const plusMinus = document.querySelector(".plus-minus-text");
+plusMinus.addEventListener("click", () => {
+  inputValue.value = -inputValue.value;
+});
+
+const decimal = document.querySelector(".decimal");
+decimal.addEventListener("click", () => {
+  inputValue.value += ".";
+});
+
 const equalto = document.querySelector(".equalto");
 equalto.addEventListener("click", () => {
-  result = eval(Number(first) + second + Number(inputValue.value));
+  result = eval(first + second + inputValue.value);
   inputValue.value = result;
 });
