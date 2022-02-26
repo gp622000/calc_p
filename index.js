@@ -1,6 +1,6 @@
 var inputValue = document.querySelector(".input-text");
-var first = "";
-var second = "";
+var first = 0;
+var second = 0;
 // var arr = [];
 // inputValue.addEventListener("keydown", (value) => {
 //   arr.push(value.key);
@@ -10,55 +10,58 @@ var second = "";
 
 const AcText = document.querySelector(".ac-text");
 AcText.addEventListener("click", () => {
-  inputValue.value = "";
+  inputValue.value = 0;
+  first = 0;
+  second = 0;
 });
 
 const zero = document.querySelector(".zero");
 zero.addEventListener("click", () => {
-  inputValue.value += 0;
+  inputValue.value = Number(inputValue.value) + 0;
 });
 
 const one = document.querySelector(".one");
 one.addEventListener("click", () => {
-  inputValue.value += 1;
+  inputValue.value = Number(inputValue.value) + 1;
 });
 
 const two = document.querySelector(".two");
 two.addEventListener("click", () => {
-  inputValue.value += 2;
+  inputValue.value = Number(inputValue.value) + 2;
 });
 
 const three = document.querySelector(".three");
 three.addEventListener("click", () => {
-  inputValue.value += 3;
+  //   inputValue.value = Number(inputValue.value);
+  inputValue.value = Number(inputValue.value) + 3;
 });
 
 const four = document.querySelector(".four");
 four.addEventListener("click", () => {
-  inputValue.value += 4;
+  inputValue.value = Number(inputValue.value) + 4;
 });
 
 const five = document.querySelector(".five");
 five.addEventListener("click", () => {
-  inputValue.value += 5;
+  inputValue.value = Number(inputValue.value) + 5;
 });
 
 const six = document.querySelector(".six");
 six.addEventListener("click", () => {
-  inputValue.value += 6;
+  inputValue.value = Number(inputValue.value) + 6;
 });
 
 const seven = document.querySelector(".seven");
 seven.addEventListener("click", () => {
-  inputValue.value += 7;
+  inputValue.value = Number(inputValue.value) + 7;
 });
 const eight = document.querySelector(".eight");
 eight.addEventListener("click", () => {
-  inputValue.value += 8;
+  inputValue.value = Number(inputValue.value) + 8;
 });
 const nine = document.querySelector(".nine");
 nine.addEventListener("click", () => {
-  inputValue.value += 9;
+  inputValue.value = Number(inputValue.value) + 9;
 });
 
 const plus = document.querySelector(".plus");
@@ -108,6 +111,15 @@ decimal.addEventListener("click", () => {
 
 const equalto = document.querySelector(".equalto");
 equalto.addEventListener("click", () => {
-  result = eval(first + second + inputValue.value);
-  inputValue.value = result;
+  try {
+    result = eval(Number(first) + second + Number(inputValue.value));
+    // if (result == undefined) {
+    //   inputValue.value = Number("");
+    // }
+    inputValue.value = result;
+    inputValue.value = Number(inputValue.value);
+    console.log(inputValue.value);
+  } catch (e) {
+    inputValue.value = 0;
+  }
 });
