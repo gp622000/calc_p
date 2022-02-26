@@ -4,14 +4,22 @@
   grid-template-columns: repeat(4, 1fr);
   padding: 7px;
   gap: 1px;
-  width: 50%;
+  width: 40%;
   margin: auto;
-  /* margin: 10% 30%; */
+  height: 50%;
 }
 
-input {
-  width: 99%;
-  height: 99%;
+.input-text {
+  grid-column: 1/5;
+  background-color: rgb(235, 230, 230);
+  height: 50px;
+  margin: 10px 1px;
+  border-radius: 2px;
+  border: none;
+  outline: none;
+  font-size: 1.9rem;
+  color: blue;
+  text-align: right;
 }
 .calculator-text {
   grid-column: 1/5;
@@ -22,19 +30,13 @@ input {
   padding: 10px;
   font-size: 1.2rem;
   font-weight: bold;
-  margin: 10px 5px;
-}
-.input-field {
-  grid-column: 1/5;
-  background-color: rgb(235, 230, 230);
-  height: 50px;
-  margin: 10px 5px;
-  border-radius: 2px;
+  margin: 10px 1px;
 }
 .text {
   background-color: white;
   padding: 10px;
   text-align: center;
+  font-size: 1.5rem;
 }
 .zero {
   grid-column: 1/3;
