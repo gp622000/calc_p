@@ -117,7 +117,6 @@ equalto.addEventListener("click", () => {
       result = "";
     }
     inputValue.value = result;
-    console.log(inputValue.value);
   } catch (e) {
     inputValue.value = 0;
   }
