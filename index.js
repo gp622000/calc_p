@@ -64,10 +64,25 @@ const plus = document.querySelector(".plus");
 plus.addEventListener("click", () => {
   first = inputValue.value;
   inputValue.value = "";
+  second = "+";
+});
+
+const minus = document.querySelector(".minus");
+minus.addEventListener("click", () => {
+  first = inputValue.value;
+  inputValue.value = "";
+  second = "-";
+});
+
+const multiply = document.querySelector(".multiply");
+multiply.addEventListener("click", () => {
+  first = inputValue.value;
+  inputValue.value = "";
+  second = "*";
 });
 
 const equalto = document.querySelector(".equalto");
 equalto.addEventListener("click", () => {
-  result = eval(Number(first) + Number(inputValue.value));
+  result = eval(Number(first) + second + Number(inputValue.value));
   inputValue.value = result;
 });
