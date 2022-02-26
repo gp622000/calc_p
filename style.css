@@ -37,6 +37,7 @@
   padding: 10px;
   text-align: center;
   font-size: 1.5rem;
+  cursor: pointer;
 }
 .zero {
   grid-column: 1/3;
